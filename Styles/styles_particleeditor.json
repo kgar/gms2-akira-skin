@@ -1,0 +1,47 @@
+﻿{
+	"particle_type_listbox": { 
+		selection_colour: "#44786B61",
+		mouse_over_colour: "#44A09389"
+	},
+
+	"particle_type_list_item": {
+		mouse_events: "True"
+	},
+
+	"particle_type_list_item_even": {
+		mouse_events: "True"
+	},
+
+	"particle_type_list_item_odd": {
+		mouse_events: "True"
+	},
+	
+	"particle_type_list_item_label": {
+		edit_in_place: "True",
+		mouse_events: "True"
+	},
+
+	"particle_emitter": {
+		mouse_events: "True"
+	},
+
+	"particle_emitter_header": {
+	},
+
+	"particle_emitter_thumb_image": {
+		mouse_events: "False"
+	},
+
+	"particle_emitter_listbox": {
+		disable_highlight_rendering: "True",
+		clip: ["0px"]
+	},
+
+	"particle_editor_background_image": {
+		mouse_events: "False"
+	},
+
+	"particle_canvas": {
+		zerozero_enabled: "False"
+	}
+}

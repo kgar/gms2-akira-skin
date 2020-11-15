@@ -1,0 +1,156 @@
+{
+  "animcurve_editor_style":
+  {
+  },
+  
+  "animcurve_anchor_frame": {
+    colour: "#ffffffff",
+    position: [
+      [ 0, 0, 0, 0 ],
+      [ 0, 0, 0, 0 ],
+      [ 0, 0, 0, 0 ],
+      [ 0, 0, 0, 0 ],
+      [ 0, 0, 16, 16 ],
+      [ 0, 0, 0, 0 ],
+      [ 0, 0, 0, 0 ],
+      [ 0, 0, 0, 0 ],
+      [ 0, 0, 0, 0 ]
+    ],
+    frame_name: "AnchorPoint.png",
+    width: "9dpi_px",
+    height: "9dpi_px"
+  },
+
+  "animcurve_item_expand": {
+    image_flags: "Centre",
+    font_icon: [ "asset_browser_icon_font", "AB_icon_arrow_right" ],
+    vector_icon_size: "10dpi_px"
+  },
+
+  "animcurve_item_collapse": {
+    image_flags: "Centre",
+    font_icon: [ "asset_browser_icon_font", "AB_icon_arrow_45degree" ],
+    vector_icon_size: "10dpi_px"
+  },
+
+  "animcurve_channelstack": {
+    colour: "#00000000",
+    stack_order: "TopToBottom",
+    stack_resize: "ResizeHeight",
+    top: "0px",
+    left: "0px",
+    mouse_events: "false"
+  },
+
+  "animcurve_default_colours": {
+    channel_colours: [ "#ff4040ff", "#ffff80ff", "#ffff8080", "#ffff8000", "#ffffff80", "#ff80ff00", "#ff80C0ff", "#ff0000ff", "#ff00ffff", "#ff00ff00", "#ffffff00", "#ffff0000", "#ffff00ff" ]
+  },
+
+  "animcurve_icon_linear": {
+    font_icon: [ "anim_curve_icon_font", "icon_ac_linear" ]
+  },
+
+  "animcurve_icon_smooth": {
+    font_icon: [ "anim_curve_icon_font", "icon_ac_smooth" ]
+  },
+
+  "ac_point_textbox": {
+    frame_name: "",
+    clip: [ "2px" ],
+    top: "1dpi_px",
+    left: "4dpi_px",
+    right: "4dpi_px",
+    bottom: "2dpi_px",
+    colour: "#ff5c534c",
+    text_colour: "#ffffe684"
+  },
+
+  "channel_item_grid": {
+    height: "28dpi_px",
+    left :"0px",
+	  top:"0px",
+	  grid_columnlayout:["12dpi_px", "20dpi_px", "1*", "24dpi_px", "auto"],
+	  mouse_events:"true"
+  },
+  
+  "channel_child_grid":{
+	height:"24dpi_px",
+	left:"0px",
+	top:"0px",
+	grid_columnlayout:["32dpi_px", "1*", "auto", "50dpi_px", "auto", "50dpi_px", "8dpi_px"]
+  },
+
+  "animcurve_scrub_handle": {
+    image_flags: "Centre",
+    font_icon: [ "anim_curve_icon_font", "icon_ac_playhead" ],
+    width: "11dpi_px",
+    height:"11dpi_px",
+    colour: "#ff9ed4d2"
+  },
+
+  "animcurve_editor_window": {
+    width: "270dpi_px",
+    height:"490dpi_px"
+  },
+  
+  "animcurve_graph_window": {
+    width: "670dpi_px",
+    height:"490dpi_px"
+  },
+  
+  "ac_roundbox_frame": {
+    colour: "#ffffffff",
+    position: [
+      [ 0, 0, 7, 7 ], [ 7, 0, 8, 7 ], [ 15, 0, 7, 7 ],
+      [ 0, 7, 7, 5 ], [ 7, 7, 8, 5 ], [ 15, 7, 7, 5 ],
+      [ 0, 12, 7, 7 ],[ 7, 12,8, 7 ], [ 15, 12,7, 7 ]
+    ],
+    frame_name: "AnimCurveEditor/ac_curve_name_box.png"
+   },
+
+  "animcurve_trash_button":{
+    base:"no_frame_button",
+    width:"24dpi_px",
+    icon_flags:"Centre",
+    font_icon:["anim_curve_icon_font","icon_ac_delete"],
+    vector_icon_size:"17dpi_px",
+    colour:"#ffffffff"
+  },
+  
+  "animcurve_line_button":{
+	  base:"no_frame_button",
+	  icon_flags:"Centre",
+	  font_icon:["asset_browser_icon_font","AB_icon_add"],
+	  vector_icon_size:"17dpi_px",
+	  colour:"#ffffffff",
+    localise_tooltip: "AnimCurve_CurveType"
+  },
+
+  "animcurve_range_button":{
+    base:"button_up",
+	  icon_flags:"Centre",
+    font_icon: ["anim_curve_icon_font","icon_ac_set_range"],
+    icon_colour: "#ffffffff"
+  },
+
+  "animcurve_hv_label":{
+    base:"label",
+    colour: "#FFFFF351"
+  },
+
+  "animcurve_textbox":{
+    base: "no_frame_button",
+    colour: "#FF4C4C4C"
+  },
+
+  "fontimage":{
+    colour:"0xffffffff"
+  },
+
+  "animcurve_addpoint_button":{
+    base: "button_up",
+    icon_flags:"Centre",
+    font_icon:["anim_curve_icon_font","icon_ac_add_point"],
+    vector_icon_size:"18dpi_px"
+  }
+}

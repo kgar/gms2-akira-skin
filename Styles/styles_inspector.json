@@ -1,0 +1,635 @@
+{
+	"inspector_element": {
+		stack_order: "TopToBottom",
+		stack_resize: "ResizeHeight",
+		stack_flags: "FullSizeInternalPanel",
+		width_flags: "ScaleToFit",
+		left: "0px",
+		right: "0px",
+    margin_bottom:"20dpi_px"
+	},
+
+	"inspector_panel_same_line_child": {
+		margin_top: "",
+		margin_bottom: "",
+    right: "0px"
+	},
+
+	"inspector_panel_first": {
+	  margin_top: "0dpi_px"
+  },
+
+	"inspector_panel_inbetween": {
+		margin_top: "5dpi_px"
+	},
+
+	"inspector_panel_last": {
+		margin_top: "5dpi_px",
+    margin_bottom: "2dpi_px"
+	},
+
+	"inspector_category_first": {
+		margin_top: "10dpi_px",
+		margin_left: "5dpi_px",
+		margin_right: "5dpi_px"
+	},
+
+	"inspector_category_inbetween": {
+		base: "inspector_category_first",
+	},
+
+	"inspector_category_last": {
+		base: "inspector_category_first",
+    margin_bottom:"15dpi_px"
+	},
+
+	"inspector_object_panel_first": {
+		base: "inspector_category_first"
+	},
+
+	"inspector_object_panel_inbetween": {
+		base: "inspector_category_first"
+	},
+
+	"inspector_object_panel_last": {
+		base: "inspector_category_last"
+	},
+
+	"inspector_array_list_first": {
+		base: "inspector_category_first"
+	},
+
+	"inspector_array_list_inbetween": {
+		base: "inspector_category_first"
+	},
+
+	"inspector_array_list_last": {
+		base: "inspector_category_last"
+	},
+
+	"collapsible_inspector_panel": {
+		base_style: "collapsible_inspector_panel",
+		label_style: "collapsible_inspector_panel_label",
+		image_style: "collapsible_inspector_panel_collapse_image",
+		width: "100%",
+		height: "100%",
+		top: "0px",
+		left: "0px",
+		right: "0px",
+		margin_top: "", 
+		margin_bottom: "", 
+		header_height: "21dpi_px",
+		colour: "#ffffffff", 
+		position: [
+					[0, 0, 0, 0], [0, 0, 21, 2], [0, 0, 0, 0], 
+					[0, 0, 0, 0], [0, 2, 21, 18], [0, 0, 0, 0], 
+					[0, 0, 0, 0], [0, 20, 21, 1], [0, 0, 0, 0]
+				], 
+		frame_name: "Inspector/inspector_category_frame.png", 
+	},
+
+	"collapsible_inspector_panel_label": {
+		left: "6dpi_px",
+		auto_size: "True",
+		auto_ellipsis: "True"
+	},
+
+	"collapsible_inspector_panel_collapse_image": {
+		margin_right: "9dpi_px",
+		top: "3dpi_px",
+		bottom: "0px",
+        width: "12dpi_px",
+		image: "Dock/dock_item_arrowD.png", 
+		image_flags: "Stretch, Centre, KeepAspectRatio", 
+		mouse_events: "False"
+	},
+
+	"collapsible_inspector_panel_expand_image": {
+		top: "2dpi_px",
+		image: "Dock/dock_item_arrowR.png"
+	},
+
+	"inspector_error_label": {
+		left: "3dpi_px",
+		colour: "#FF3867F6",
+		auto_ellipsis: "True"
+	},
+
+	"inspector_null_label": {
+		left: "3dpi_px",
+		auto_ellipsis: "True",
+		deactivated: "True"
+	},
+
+	"labeled_inspector_panel": {
+		left: "3dpi_px",
+		right: "3dpi_px",
+		height: "24dpi_px",
+		content_margin: "3%"
+	},
+
+  "labeled_inspector_panelgrid": {
+    left: "0dpi_px",
+    right: "0dpi_px",
+    grid_rowlayout: [ "auto" ],
+    grid_columnlayout: [ "120dpi_px", "1*" ],
+    grid_resize: "ResizeGridHeight",
+    column_spacing:"10dpi_px",
+    mouse_events: "False"
+  },
+
+  "inspector_panel_label": {
+    left:"8dpi_px",
+    right:"0px",
+    auto_size:"false",
+    height:"24dpi_px"
+  },
+
+  "inspector_field_panel":{
+    left: "0dpi_px",
+    right: "0dpi_px",
+    grid_rowlayout: [ "auto" ],
+    grid_columnlayout: [ "24dpi_px", "1*" ],
+    grid_resize: "ResizeGridHeight",
+    column_spacing:"0dpi_px",
+    mouse_events: "False"
+  },
+
+
+	"button_inspector_panel": {
+		left: "3dpi_px",
+		right: "3dpi_px",
+		auto_size: "True"
+	},
+
+	"inspector_textbox": {
+		width: "100%"
+	},
+
+	"inspector_numeric_textbox_old": {
+		width: "100%",
+		step_increment: 1,
+    has_buttons:"True"
+	},
+
+  "inspector_colour_select": {
+    width: "100%",
+    height: "22dpi_px",
+    width_flags: "ScaleToFit"
+  },
+
+	"inspector_array_list": {
+		stack_order: "TopToBottom",
+		stack_resize: "ResizeHeight",
+		width: "100%",
+		stack_flags: "FullSizeInternalPanel",
+		container_element_column: 2
+	},
+
+	"inspector_array_list_element_container": {
+		right: "3dpi_px"
+	},
+
+	"inspector_array_list_dragging_image": {
+		image: "ArrowRight.png"
+	},
+
+	"inspector_array_list_draggable_image": {
+		image: "Buttons/widget_thumb.png",
+		image_flags: "Resize, Centre",
+		mouse_events: "False"
+	},
+
+	"inspector_array_list_readonly": {
+	},
+
+	"inspector_array_list_controls": {
+		margin_top: "4dpi_px",
+		left: "3dpi_px",
+		right: "3dpi_px",
+		height: "20dpi_px"
+	},
+
+	"inspector_array_list_size_text_box": {
+		width: "64dpi_px",
+		height: "20dpi_px"
+	},
+
+	"inspector_array_list_empty_label": {
+		left: "3dpi_px",
+		localise_caption: "InspectorGadget_Array_Empty",
+		colour: "#FF686666"
+	},
+
+	"inspector_array_list_size": {
+		left: "0px",
+	},
+
+	"inspector_array_list_add": {
+		right: "0px",
+		width: "64dpi_px",
+		height: "20dpi_px",
+		icon: "Buttons/icon_IDE_add.png"
+	},
+
+	"inspector_event_list": {
+		height: "160dpi_px"
+	},
+
+	"inspector_event_list_listbox": {
+		base: "borderless_list_box",
+		left: "4dpi_px",
+		top: "8dpi_px",
+		right: "4dpi_px",
+		bottom: "8dpi_px",
+		colour: "#FF313131"
+	},
+
+	"inspector_icon_button_up": {
+		frame_name: "",
+		auto_height: "False",
+		height: "100%",
+		left: "0px",
+		right: "0px",
+		icon_flags: "Centre",
+		button_over_style: "inspector_button_no_frame",
+		button_down_style: "inspector_button_no_frame",
+		button_over_down_style: "inspector_button_no_frame",
+		deactivated_style: "inspector_button_deactivated",
+		reactivated_style: "inspector_button_reactivated",
+		up_tint: "#00000000",
+		down_tint: "#FF9F8565",
+		up_focused_tint: "#FF1F1F1F",
+		down_focused_tint: "#FF9F8565",
+		mouseover_up_tint: "#FF5C534C",
+		mouseover_up_focused_tint: "#FF5C534C",
+		mouseover_down_tint: "#FF9F8565",
+		mouseover_down_focused_tint: "#FF9F8565"
+	},
+
+	"inspector_button_no_frame": {
+		frame_name: ""
+	},
+	
+	"inspector_button_deactivated": {
+		label_colour: "#40ffffff", 
+		mouse_events: "false"
+	},
+	
+	"inspector_button_reactivated": {
+		label_colour: "#ffffffff", 
+		mouse_events: "true"
+	},
+
+	"inspector_button_remove_faded": {
+		base: "inspector_icon_button_up",
+		icon_colour: "#FFB6B6B6"
+	},
+
+	"inspector_object_panel": {
+		left: "0px",
+		right: "0px",
+		stack_order: "TopToBottom",
+		stack_resize: "ResizeHeight"
+	},
+
+	"inspector_same_line_grid": {
+		column_spacing: "6dpi_px"
+	},
+
+	"inspector_enum": {
+		width: "100%",
+		width_max: "128dpi_px"
+	},
+
+	"text_box_inspector_reset": {
+		deactivated: "False",
+		colour: "#FFFFFFFF",
+		localise_tooltip: ""
+	},
+	
+	"text_box_inspector_reset_buttons":{
+		base:"text_box_inspector_reset"
+	},
+
+	"text_box_inspector_identical": {
+		font_bold: "False"
+	},
+	
+	"text_box_inspector_identical_buttons": {
+		base:"text_box_inspector_identical"
+	},
+
+	"text_box_inspector_differing": {
+		colour: "#FF43CDFF",
+		text: "-",
+		localise_tooltip: "InspectorGadget_Coalescing_Differ_Tooltip",
+		font_bold: "True"
+	},
+
+	"text_box_inspector_differing_buttons": {
+		base:"text_box_inspector_differing"
+	},
+	
+	"text_box_inspector_disallowed": {
+		deactivated: "True",
+		text: "-",
+		localise_tooltip: "InspectorGadget_Coalescing_Disallowed_Tooltip",
+		font_bold: "False"
+	},
+	
+	"text_box_inspector_disallowed_buttons": {
+		base:"text_box_inspector_disallowed"
+	},
+
+	"text_box_inspector_error": {
+		deactivated: "True",
+		colour: "#FF4450DD",
+		text: "???",
+		localise_tooltip: "InspectorGadget_Coalescing_Error_Tooltip",
+		font_bold: "False"
+	},
+
+	"text_box_inspector_error_buttons": {
+		base:"text_box_inspector_error"
+	},
+	
+	"inspector_checkbox": {
+		left: "0px"
+	},
+
+	"checkbox_inspector_reset": {
+		colour: "#FFFFFFFF"
+	},
+	"checkbox_inspector_reset_highlighted": {
+		colour: "#FFFFFFFF"
+	},
+	"checkbox_inspector_reset_stack": {
+		deactivated: "False",
+		localise_tooltip: ""
+	},
+
+	"checkbox_inspector_differing": {
+		colour: "#FF43CDFF"
+	},
+	"checkbox_inspector_differing_stack": {
+		localise_tooltip: "InspectorGadget_Coalescing_Differ_Tooltip"
+	},
+	"checkbox_inspector_differing_tick": {
+	},
+	"checkbox_inspector_differing_untick": {
+	},
+	"checkbox_inspector_differing_highlighted": {
+	},
+	
+	"checkbox_inspector_disallowed": {
+	},
+	"checkbox_inspector_disallowed_stack": {
+		deactivated: "True",
+		localise_tooltip: "InspectorGadget_Coalescing_Disallowed_Tooltip"
+	},
+	"checkbox_inspector_disallowed_tick": {
+	},
+	"checkbox_inspector_disallowed_untick": {
+	},
+	"checkbox_inspector_disallowed_highlighted": {
+	},
+	
+	"checkbox_inspector_error": {
+		colour: "#FF4450DD"
+	},
+	"checkbox_inspector_error_stack": {
+		deactivated: "True",
+		localise_tooltip: "InspectorGadget_Coalescing_Error_Tooltip"
+	},
+	"checkbox_inspector_error_tick": {
+	},
+	"checkbox_inspector_error_untick": {
+	},
+	"checkbox_inspector_error_highlighted": {
+	},
+
+	"inspector_slider": {
+		grid_columnlayout: ["auto", "1*", "60dpi_px"],
+		has_textbox: "True",
+		height: "24dpi_px",
+		flow_increment: 5,
+		click_increment: 5,
+		textbox_style: "inspector_numeric_textbox"
+	},
+
+	"slider_inspector_reset": {
+		deactivated: "False",
+		localise_tooltip: "",
+		internal_textbox_style: "text_box_inspector_reset"
+	},
+
+	"slider_inspector_identical": {
+		internal_textbox_style: "text_box_inspector_identical"
+	},
+
+	"slider_inspector_differing": {
+		localise_tooltip: "InspectorGadget_Coalescing_Differ_Tooltip",
+		internal_textbox_style: "text_box_inspector_differing"
+	},
+
+	"slider_inspector_disallowed": {
+		deactivated: "True",
+		localise_tooltip: "InspectorGadget_Coalescing_Disallowed_Tooltip",
+		internal_textbox_style: "text_box_inspector_disallowed"
+	},
+
+	"slider_inspector_error": {
+		deactivated: "True",
+		localise_tooltip: "InspectorGadget_Coalescing_Error_Tooltip",
+		internal_textbox_style: "text_box_inspector_error"
+	},
+
+	"combobox_inspector_reset": {
+		colour: "#FFFFFFFF",
+		deactivated: "False",
+		localise_tooltip: "",
+		width: "100%"
+	},
+
+	"combobox_inspector_differing": {
+		colour: "#FF43CDFF",
+		localise_tooltip: "InspectorGadget_Coalescing_Differ_Tooltip"
+	},
+
+	"combobox_inspector_disallowed": {
+		deactivated: "True",
+		localise_tooltip: "InspectorGadget_Coalescing_Disallowed_Tooltip"
+	},
+
+	"combobox_inspector_error": {
+		colour: "#FF4450DD",
+		deactivated: "True",
+		localise_tooltip: "InspectorGadget_Coalescing_Error_Tooltip"
+	},
+
+	"button_inspector_reset": {
+		colour: "#FFFFFFFF",
+		deactivated: "False",
+		localise_tooltip: "",
+		width: "100%"
+	},
+
+	"button_inspector_differing": {
+		colour: "#FF43CDFF",
+		localise_tooltip: "InspectorGadget_Coalescing_Differ_Tooltip"
+	},
+
+	"button_inspector_disallowed": {
+		deactivated: "True",
+		localise_tooltip: "InspectorGadget_Coalescing_Disallowed_Tooltip"
+	},
+
+	"button_inspector_error": {
+		colour: "#FF4450DD",
+		deactivated: "True",
+		localise_tooltip: "InspectorGadget_Coalescing_Error_Tooltip"
+	},
+
+  "colour_select_inspector_normal": {
+    backing_colour: "#FFFFFFFF",
+    show_colour: "True"
+  },
+
+  "colour_select_inspector_differing": {
+    backing_colour: "#FF43CDFF",
+    show_colour: "False"
+  },
+
+	"inspector_array_list_state_label": {
+		left: "0px",
+		margin_left: "3dpi_px",
+		auto_size: "False",
+		width: "100%",
+		height: "20dpi_px",
+		margin_top: "4dpi_px",
+		localise_tooltip: "",
+		auto_ellipsis: "True"
+	},
+
+	"inspector_array_list_state_label_differing": {
+		colour: "#FF43CDFF",
+		localise_tooltip: "InspectorGadget_Coalescing_Differ_Tooltip"
+	},
+
+	"inspector_array_list_state_label_disallowed": {
+		localise_tooltip: "InspectorGadget_Coalescing_Disallowed_Tooltip"
+	},
+
+	"inspector_array_list_state_label_error": {
+		colour: "#FF4450DD",
+		localise_tooltip: "InspectorGadget_Coalescing_Error_Tooltip"
+	},
+
+	"inspector_object_panel_state_label": {
+		left: "0px",
+		margin_left: "3dpi_px",
+		auto_size: "False",
+		width: "100%",
+		height: "20dpi_px",
+		margin_top: "4dpi_px",
+		localise_tooltip: "",
+		auto_ellipsis: "True"
+	},
+
+	"inspector_object_panel_state_label_differing": {
+		colour: "#FF43CDFF",
+		localise_tooltip: "InspectorGadget_Coalescing_Differ_Tooltip"
+	},
+
+	"inspector_object_panel_state_label_disallowed": {
+		localise_tooltip: "InspectorGadget_Coalescing_Disallowed_Tooltip"
+	},
+
+	"inspector_object_panel_state_label_error": {
+		colour: "#FF4450DD",
+		localise_tooltip: "InspectorGadget_Coalescing_Error_Tooltip"
+	},
+
+	"inspector_lock_button_unlocked": {
+		icon: "Buttons/icon_unlocked.png",
+		pressed: "False",
+		localise_tooltip: "Inspector_Lock"
+	},
+
+	"inspector_lock_button_locked": {
+		icon: "Buttons/icon_locked.png",
+		pressed: "True",
+		localise_tooltip: "Inspector_Unlock"
+	},
+
+  "inspector_resource_button": {
+		height: "32dpi_px"
+	},
+
+  "inspector_splitter": {
+		colour: "#ffffffff", 
+		position: [
+					[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], 
+					[0, 0, 0, 0], [0, 0, 9, 9], [0, 0, 0, 0], 
+					[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]
+				], 
+    width:"9dpi_px",
+		frame_name: "Splitters/thinSplitter.png"
+	},
+
+  "inspector_asset_ref": {
+    width: "100%",
+    right: "0px",
+    top: "0px",
+    height:"88dpi_px",
+    grid_rowlayout:["1*", "28dpi_px"]
+  },
+  
+  "inspector_numeric_textbox": {
+	width: "100%",
+	step_increment: 1,
+    has_buttons:"True",
+	colour: "#ffffffff", 
+	position: [
+				[0, 0, 2, 2], [2, 0, 28, 2], [30, 0, 2, 2], 
+				[0, 2, 2, 20], [2, 2, 28, 20], [30, 2, 2, 20], 
+				[0, 22, 2, 2], [2, 22, 28, 2], [30, 22, 2, 2]
+			], 
+	frame_name: "Buttons/box-frame.png",
+	textbox_style: "inspector_internal_textbox",
+	button_increment_style:"inspector_text_box_increment_button",
+	button_decrement_style:"inspector_text_box_decrement_button",
+  },
+  
+  "inspector_internal_textbox_buttons":{
+	colour:"#ffffffff",
+	left: "2px",
+	right: "2px", 
+	top: "2px",
+	bottom: "2px",
+	width_flags: "None",
+	position: [
+		[0, 0, 0, 0], [0, 0, 0, 0],[0, 0, 0, 0], 
+		[0, 0, 0, 0], [4, 4, 24, 24], [0, 0, 0, 0],
+		[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]
+	], 
+	frame_name: "Window/dial_inner.png"
+  },
+  
+  "inspector_text_box_increment_button":{
+	right: "2px", 
+	top: "1px",
+	width: "12dpi_px"
+  },
+  
+  "inspector_text_box_decrement_button":{
+	right: "2px", 
+	bottom: "1px", 
+	width: "12dpi_px"
+  },
+  
+  
+  
+  
+}

@@ -1,0 +1,872 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Layouts>
+  <Layout layout_name="ParticleEditor_BackgroundSettings" layout_guid="d8ffb2ac-9412-48b7-9aba-b4e3352efc93">
+    <ScrollPanel stylename="default_scrollpanel" height="250dpi_px" width="480dpi_px" left="0px" top="0px" scrollpanel_flags="None">
+      <ChildGadgets>
+        <StackPanel stylename="stack_panel" left="6dpi_px" top="6dpi_px" stack_order="TopToBottom" stack_resize="ResizeAll">
+          <ChildGadgets>
+            <Label stylename="label" height="16px" left="0px" top="0px" margin_bottom="6dpi_px" localise_caption="ParticleEditor_BackgroundLabel" word_wrap="True" />
+            <StackPanel stylename="stack_panel" left="0px" top="28px" margin_top="6dpi_px" stack_resize="ResizeAll">
+              <ChildGadgets>
+                <SpriteSelector stylename="sprite_selector" layout_id="sprite" layout_guid="388f025f-8034-4f79-884c-57e33151a550" height="85px" width="200dpi_px" left="6px" top="16dpi_px" margin_left="6dpi_px" bind_property="previewSpriteView" />
+                <LocalImageGadget stylename="local_image_gadget" layout_id="local_image" layout_guid="d541f7ef-ee6e-4617-aab2-8be358882644" height="188.5px" width="228px" left="212px" margin_left="6dpi_px" margin_top="16dpi_px" localised_caption="ParticleEditor_BackgroundImage" />
+              </ChildGadgets>
+            </StackPanel>
+          </ChildGadgets>
+        </StackPanel>
+      </ChildGadgets>
+    </ScrollPanel>
+  </Layout>
+  <Layout layout_name="ParticleType_ListItem" layout_guid="da1eedbf-8bd7-4ae9-89f6-4d4f9b2c4be4">
+    <Grid stylename="grid_container" height="26dpi_px" left="0px" grid_columnlayout="['1*', 'auto']">
+      <Cell row="0" column="0" stylename="grid_container_panel" flow_index="0">
+        <ChildGadgets>
+          <Image stylename="particle_emitter_thumb_image" height="12px" width="7dpi_px" left="0px" margin_left="2dpi_px" margin_right="2dpi_px" image_flags="Stretch, Centre, KeepAspectRatio" image="Buttons\widget_thumb.png" />
+          <Label stylename="particle_type_list_item_label" height="16px" width="0px" left="11dpi_px" bind_property="name" />
+        </ChildGadgets>
+      </Cell>
+      <Cell row="0" column="1" stylename="grid_container_panel" flow_index="0">
+        <ChildGadgets>
+          <Button stylename="button_up" layout_id="btn_edit" layout_guid="4b943df0-0f87-4e27-83fa-150721c5213e" localise_tooltip="ParticleEditor_EditParticleType" width="24dpi_px" margin_right="4dpi_px" icon_flags="Stretch, Centre, KeepAspectRatio" icon="Buttons\icon_view.png" />
+        </ChildGadgets>
+      </Cell>
+    </Grid>
+  </Layout>
+  <Layout layout_name="ParticleEditor" layout_guid="030a68af-f90d-4f43-94cf-2b9165ceb376">
+    <Window stylename="window" height="768dpi_px" width="1100dpi_px" left="26px" top="54px" localise_title="ParticleEditor_Title" window_flags="Default">
+      <Client>
+        <ChildGadgets>
+          <Grid stylename="grid_container_framed" grid_columnlayout="['2.5*', '1*']" row_spacing="6dpi_px">
+            <ColumnDockSplitter stylename="dock_splitter" height="722px" width="14dpi_px" left="762px" top="0px" row="0" column="1" rowspan="1" columnspan="1" />
+            <Cell row="0" column="0" stylename="grid_container_panel" flow_index="0">
+              <ChildGadgets>
+                <ParticleCanvas stylename="particle_canvas" layout_id="canvas" layout_guid="642c4233-53c5-4695-ba04-3c5d1e8879d5"/>
+                <ScrollPanel stylename="bordered_scrollpanel_dark" height="66px" width="105px" left="-1px" top="-1px" colour="#80FFFFFF" scrollpanel_flags="ResizeHeight, ResizeWidth">
+                  <ChildGadgets>
+                    <StackPanel stylename="stack_panel" left="8dpi_px" top="8dpi_px" margin_left="8dpi_px" stack_order="TopToBottom" stack_resize="ResizeAll">
+                      <ChildGadgets>
+                        <Label stylename="label" layout_id="label_particlecount" layout_guid="92b2878d-9578-4697-8d89-cb4be8c3ba49" height="16px" width="71px" left="0px" top="0px" margin_right="8dpi_px" localise_caption="ParticleEditorStats_ParticleCount" />
+                        <Label stylename="label" layout_id="label_updatetime" layout_guid="d9b262b9-813f-451c-bddc-faa1e255771e" height="16px" width="81px" left="0px" top="16px" margin_right="8dpi_px" localise_caption="ParticleEditorStats_UpdateTime" />
+                        <Label stylename="label" layout_id="label_drawtime" layout_guid="73d68e93-44d4-475a-babd-c1d71d24157e" height="16px" width="87px" left="0px" top="32px" margin_right="8dpi_px" margin_bottom="8dpi_px" localise_caption="ParticleEditorStats_DrawTime" />
+                      </ChildGadgets>
+                    </StackPanel>
+                  </ChildGadgets>
+                </ScrollPanel>
+              </ChildGadgets>
+            </Cell>
+            <Cell row="0" column="1" stylename="grid_container_framed_panel" flow_index="0">
+              <ChildGadgets>
+                <Grid stylename="grid_container" grid_rowlayout="['auto', 'auto', 'auto', '0.2*', 'auto', '0.8*']" grid_resize="ResizeGrid">
+                  <Cell row="0" column="0" stylename="grid_container_panel" flow_index="0">
+                    <ChildGadgets>
+                      <TitleBar stylename="title_bar" localise_title="ParticleEditor_System" />
+                    </ChildGadgets>
+                  </Cell>
+                  <Cell row="1" column="0" stylename="grid_container_panel" flow_index="0">
+                    <ChildGadgets>
+                      <ScrollPanel stylename="bordered_scrollpanel_dark" height="60px" top="-1px" bottom="-1px" margin_top="2dpi_px" margin_bottom="2dpi_px" scrollpanel_flags="ResizeHeight">
+                        <ChildGadgets>
+                          <StackPanel stylename="stack_panel" left="4dpi_px" right="4dpi_px" stack_order="TopToBottom" stack_resize="ResizeAll">
+                            <ChildGadgets>
+                              <Grid stylename="grid_container" left="0px" top="0px" margin_bottom="4dpi_px" grid_rowlayout="['auto']" grid_columnlayout="['auto', '1*']" grid_resize="ResizeGrid">
+                                <Cell row="0" column="0" stylename="grid_container_panel" flow_index="0">
+                                  <ChildGadgets>
+                                    <Label stylename="label" height="16px" width="34px" left="0px" margin_right="16dpi_px" localise_caption="SpriteEditor_Origin" />
+                                  </ChildGadgets>
+                                </Cell>
+                                <Cell row="0" column="1" stylename="grid_container_panel" flow_index="0">
+                                  <ChildGadgets>
+                                    <StackPanel stylename="stack_panel" right="0px" stack_resize="ResizeAll">
+                                      <ChildGadgets>
+                                        <NumericTextBox stylename="numeric_text_box" left="0px" bind_property="xorigin" />
+                                        <Label stylename="label" height="16px" width="6px" left="54px" margin_left="4px" margin_right="4px" caption="x" />
+                                        <NumericTextBox stylename="numeric_text_box" left="64px" bind_property="yorigin" />
+                                      </ChildGadgets>
+                                    </StackPanel>
+                                  </ChildGadgets>
+                                </Cell>
+                              </Grid>
+                              <Grid stylename="grid_container" left="1080px" top="28px" grid_rowlayout="['auto']" grid_columnlayout="['auto', '1*']" grid_resize="ResizeGrid">
+                                <Cell row="0" column="0" stylename="grid_container_panel" flow_index="0">
+                                  <ChildGadgets>
+                                    <Label stylename="label" height="16px" width="66px" left="0px" localise_caption="ParticleEditor_DrawOrder" />
+                                  </ChildGadgets>
+                                </Cell>
+                                <Cell row="0" column="1" stylename="grid_container_panel" flow_index="0">
+                                  <ChildGadgets>
+                                    <ComboBox stylename="combobox_panel" layout_id="combo_draworder" layout_guid="cf46c8ba-cfcb-47c0-bd60-d0fe78f2b696" width="128dpi_px" right="0px" bind_property="drawOrder">
+                                      <ListBoxItems />
+                                    </ComboBox>
+                                  </ChildGadgets>
+                                </Cell>
+                              </Grid>
+                            </ChildGadgets>
+                          </StackPanel>
+                        </ChildGadgets>
+                      </ScrollPanel>
+                    </ChildGadgets>
+                  </Cell>
+                  <Cell row="2" column="0" stylename="grid_container_panel" flow_index="0">
+                    <ChildGadgets>
+                      <TitleBar stylename="title_bar" localise_title="ParticleEditor_Particles" />
+                    </ChildGadgets>
+                  </Cell>
+                  <Cell row="3" column="0" stylename="grid_container_panel" flow_index="0">
+                    <ChildGadgets>
+                      <ScrollPanel stylename="bordered_scrollpanel_dark" height="" top="-1px" bottom="-1px">
+                        <ChildGadgets>
+                          <ListBox stylename="particle_type_listbox" layout_id="listbox_particles" layout_guid="5758aa4f-5ad4-42e8-8fd1-fdc37dc72189" height="" width="" left="-1px" right="-1px" top="-1px" bottom="32dpi_px" multi_select="True" allow_reorder="True">
+                            <ListBoxItems />
+                          </ListBox>
+                          <Grid stylename="grid_container" height="32dpi_px" left="4dpi_px" right="4dpi_px" bottom="0px" grid_columnlayout="['1*', 'auto', 'auto']" column_spacing="4dpi_px">
+                            <Cell row="0" column="1" stylename="grid_container_panel" flow_index="0">
+                              <ChildGadgets>
+                                <Button stylename="button_up" layout_id="btn_add_particle" layout_guid="733c62b6-7efc-44b4-a8e3-11ce031c6692" localise_tooltip="ParticleEditor_AddParticleType" width="24dpi_px" icon_flags="Stretch, Centre, KeepAspectRatio" icon="Buttons\icon_IDE_add.png" />
+                              </ChildGadgets>
+                            </Cell>
+                            <Cell row="0" column="2" stylename="grid_container_panel" flow_index="0">
+                              <ChildGadgets>
+                                <Button stylename="button_up" layout_id="btn_remove_particle" layout_guid="94a13d27-5ccf-4c5b-b9e8-17ef86821aab" localise_tooltip="ParticleEditor_RemoveParticleType" width="24dpi_px" icon_flags="Stretch, Centre, KeepAspectRatio" icon="Buttons\icon_IDE_destroy.png" />
+                              </ChildGadgets>
+                            </Cell>
+                          </Grid>
+                        </ChildGadgets>
+                      </ScrollPanel>
+                    </ChildGadgets>
+                  </Cell>
+                  <Cell row="4" column="0" stylename="grid_container_panel" flow_index="0">
+                    <ChildGadgets>
+                      <TitleBar stylename="title_bar" localise_title="ParticleEditor_Emitters" />
+                    </ChildGadgets>
+                  </Cell>
+                  <Cell row="5" column="0" stylename="grid_container_panel" flow_index="0">
+                    <ChildGadgets>
+                      <ScrollPanel stylename="bordered_scrollpanel_dark" top="-1px" bottom="0px">
+                        <ChildGadgets>
+                          <ListBox stylename="particle_emitter_listbox" layout_id="listbox_emitters" layout_guid="c0e9426f-0738-4497-a2da-dc59009a3ae3" left="-1px" right="-1px" top="-1px" bottom="32dpi_px" allow_reorder="True">
+                            <ListBoxItems />
+                          </ListBox>
+                          <Grid stylename="grid_container" height="32dpi_px" left="4dpi_px" right="4dpi_px" bottom="0px" grid_columnlayout="['1*', 'auto']" column_spacing="4dpi_px">
+                            <Cell row="0" column="1" stylename="grid_container_panel" flow_index="0">
+                              <ChildGadgets>
+                                <Button stylename="button_up" layout_id="btn_add_emitter" layout_guid="7f667317-415a-4ceb-8edb-dd3a54f778c4" localise_tooltip="ParticleEditor_AddParticleEmitter" width="24dpi_px" icon_flags="Stretch, Centre, KeepAspectRatio" icon="Buttons\icon_IDE_add.png" />
+                              </ChildGadgets>
+                            </Cell>
+                          </Grid>
+                        </ChildGadgets>
+                      </ScrollPanel>
+                    </ChildGadgets>
+                  </Cell>
+                </Grid>
+              </ChildGadgets>
+            </Cell>
+          </Grid>
+        </ChildGadgets>
+      </Client>
+      <Layout layout_name="BasicWindowFrame" layout_guid="f0695f87-de65-4a48-a3a8-9bd5cb5a8d8c" />
+    </Window>
+  </Layout>
+  <Layout layout_name="ParticleTypeEditor" layout_guid="ce0e36c5-ae31-46ee-b75b-82f4b717de7a">
+    <ScrollPanel stylename="bordered_scrollpanel_dark" scrollpanel_flags="VerticalScroll, AdjustToScrollBars">
+      <ChildGadgets>
+        <StackPanel stylename="stack_panel" left="0px" top="0px" stack_order="TopToBottom" stack_resize="ResizeHeight">
+          <ChildGadgets>
+            <ExpandableCategory stylename="expandable_category" height="296px" left="0px" right="" top="0px" margin_top="" localise_caption="ParticleTypeEditor_Appearance" collapsed="False" allow_expand="True">
+              <ChildGadgets>
+                <StackPanel stylename="stack_panel" height="258dpi_px" left="8dpi_px" right="0dpi_px" top="8px" margin_top="8dpi_px" stack_order="TopToBottom">
+                  <ChildGadgets>
+                    <Grid stylename="grid_container" height="16dpi_px" top="0px" margin_bottom="4dpi_px" grid_rowlayout="['auto']" grid_columnlayout="['1*', 'auto']" grid_resize="None">
+                      <Cell row="0" column="0" stylename="grid_container_panel" flow_index="0">
+                        <ChildGadgets>
+                          <Label stylename="label" height="16px" width="49px" left="0px" top="0px" localise_caption="ParticleTypeEditor_BuiltInTextures" />
+                        </ChildGadgets>
+                      </Cell>
+                      <Cell row="0" column="1" stylename="grid_container_panel" flow_index="0">
+                        <ChildGadgets>
+                          <Image stylename="help_icon_listbox" localise_tooltip="ParticleTypeEditor_BuiltInTextures_Tooltip" right="" />
+                        </ChildGadgets>
+                      </Cell>
+                    </Grid>
+                    <ListView stylename="list_view" layout_id="listview_textures" layout_guid="aaabc82c-88e1-491d-8db9-c206c5030772" height="96dpi_px" left="" right="" top="20px" bottom="" margin_bottom="8dpi_px" bind_property="texture" disable_search="True" item_size="48" />
+                    <ScrollPanel stylename="default_scrollpanel" height="101dpi_px" top="124px" margin_bottom="4dpi_px" scrollpanel_flags="None">
+                      <ChildGadgets>
+                        <SpriteSelector stylename="sprite_selector" height="85px" top="16dpi_px" bind_property="spriteView" />
+                        <Image stylename="help_icon_listbox" localise_tooltip="ParticleTypeEditor_Sprite_Tooltip" right="0px" top="-2px" />
+                      </ChildGadgets>
+                    </ScrollPanel>
+                    <Grid stylename="grid_container" height="24dpi_px" left="4dpi_px" right="0dpi_px" top="229px" grid_columnlayout="['auto', '1*']" grid_resize="None">
+                      <Cell row="0" column="0" stylename="grid_container_panel" flow_index="0">
+                        <ChildGadgets>
+                          <Label stylename="label" height="16px" width="30px" left="0px" margin_right="16dpi_px" localise_caption="ParticleTypeEditor_Headposition" />
+                        </ChildGadgets>
+                      </Cell>
+                      <Cell row="0" column="1" stylename="grid_container_panel" flow_index="0">
+                        <ChildGadgets>
+                          <StackPanel stylename="stack_panel" right="0px" stack_resize="ResizeAll">
+                            <ChildGadgets>
+                              <NumericTextBox stylename="numeric_text_box" left="0px" margin_right="4dpi_px" bind_property="headPosition" has_buttons="True" input_type="Real" />
+                              <Image stylename="help_icon_listbox" localise_tooltip="ParticleTypeEditor_HeadHelp" left="54px" right="" />
+                            </ChildGadgets>
+                          </StackPanel>
+                        </ChildGadgets>
+                      </Cell>
+                    </Grid>
+                  </ChildGadgets>
+                </StackPanel>
+              </ChildGadgets>
+            </ExpandableCategory>
+            <ExpandableCategory stylename="expandable_category" height="79px" left="0px" right="" top="298px" margin_top="1dpi_px" localise_caption="ParticleTypeEditor_Color" collapsed="False" allow_expand="True">
+              <ChildGadgets>
+                <StackPanel stylename="stack_panel" height="57dpi_px" left="4dpi_px" right="0dpi_px" top="0px" stack_order="TopToBottom">
+                  <ChildGadgets>
+                    <Grid stylename="grid_container" left="4dpi_px" right="0dpi_px" top="8px" margin_top="8dpi_px" grid_rowlayout="['auto']" grid_columnlayout="['auto', '1*']" grid_resize="ResizeGridHeight">
+                      <Cell row="0" column="0" stylename="grid_container_panel" flow_index="0">
+                        <ChildGadgets>
+                          <Label stylename="label" height="16px" width="37px" left="0px" margin_right="16dpi_px" localise_caption="ParticleTypeEditor_Color" />
+                        </ChildGadgets>
+                      </Cell>
+                      <Cell row="0" column="1" stylename="grid_container_panel" flow_index="0">
+                        <ChildGadgets>
+                          <StackPanel stylename="stack_panel" right="0px" stack_resize="ResizeAll">
+                            <ChildGadgets>
+                              <ColourSelectButton stylename="colour_select_button_up" width="32dpi_px" left="0px" margin_right="8dpi_px" bind_property="startColor" />
+                              <ColourSelectButton stylename="colour_select_button_up" width="32dpi_px" left="40px" margin_right="8dpi_px" bind_property="middleColor" />
+                              <ColourSelectButton stylename="colour_select_button_up" width="32dpi_px" left="80px" margin_right="8dpi_px" bind_property="endColor" />
+                              <Image stylename="help_icon_listbox" localise_tooltip="ParticleTypeEditor_ColorHelp" left="120px" right="" />
+                            </ChildGadgets>
+                          </StackPanel>
+                        </ChildGadgets>
+                      </Cell>
+                    </Grid>
+                    <Grid stylename="grid_container" left="4dpi_px" right="0dpi_px" top="34px" margin_top="8dpi_px" grid_rowlayout="['auto']" grid_columnlayout="['auto', '1*']" grid_resize="ResizeGridHeight">
+                      <Cell row="0" column="0" stylename="grid_container_panel" flow_index="0">
+                        <ChildGadgets>
+                          <Label stylename="label" height="16px" width="49px" left="0px" margin_right="16dpi_px" localise_caption="ParticleTypeEditor_Blending" />
+                        </ChildGadgets>
+                      </Cell>
+                      <Cell row="0" column="1" stylename="grid_container_panel" flow_index="0">
+                        <ChildGadgets>
+                          <StackPanel stylename="stack_panel" right="0px" stack_resize="ResizeAll">
+                            <ChildGadgets>
+                              <CheckBox stylename="checkbox_stack" left="0px" margin_right="8dpi_px" bind_property="additiveBlending" />
+                              <Image stylename="help_icon_listbox" localise_tooltip="ParticleTypeEditor_BlendingHelp" left="27px" right="" />
+                            </ChildGadgets>
+                          </StackPanel>
+                        </ChildGadgets>
+                      </Cell>
+                    </Grid>
+                  </ChildGadgets>
+                </StackPanel>
+              </ChildGadgets>
+            </ExpandableCategory>
+            <ExpandableCategory stylename="expandable_category" left="0px" right="" top="379px" margin_top="1dpi_px" localise_caption="ParticleTypeEditor_Life" allow_expand="True">
+              <ChildGadgets>
+                <StackPanel stylename="stack_panel" height="32dpi_px" width="100%" left="4dpi_px" right="0dpi_px" top="8px" margin_top="8dpi_px" stack_order="TopToBottom">
+                  <ChildGadgets>
+                    <Grid stylename="grid_container" height="24dpi_px" left="4dpi_px" right="0dpi_px" top="0px" grid_columnlayout="['1*', 'auto', '1*', 'auto']" row_spacing="8dpi_px" column_spacing="8dpi_px" grid_resize="ResizeGridHeight">
+                      <Cell row="0" column="0" stylename="grid_container_panel" flow_index="0">
+                        <ChildGadgets>
+                          <Label stylename="label" height="16px" width="53px" left="0px" localise_caption="ParticleTypeEditor_Min" />
+                        </ChildGadgets>
+                      </Cell>
+                      <Cell row="0" column="1" stylename="grid_container_panel" flow_index="0">
+                        <ChildGadgets>
+                          <NumericTextBox stylename="numeric_text_box" right="0px" bind_property="lifetimeMin" has_buttons="True" step_increment="10" max="9999999" input_type="Real" />
+                        </ChildGadgets>
+                      </Cell>
+                      <Cell row="0" column="2" stylename="grid_container_panel" flow_index="0">
+                        <ChildGadgets>
+                          <Label stylename="label" height="16px" width="56px" left="0px" localise_caption="ParticleTypeEditor_Max" />
+                        </ChildGadgets>
+                      </Cell>
+                      <Cell row="0" column="3" stylename="grid_container_panel" flow_index="0">
+                        <ChildGadgets>
+                          <NumericTextBox stylename="numeric_text_box" bind_property="lifetimeMax" has_buttons="True" step_increment="10" max="9999999" input_type="Real" />
+                        </ChildGadgets>
+                      </Cell>
+                    </Grid>
+                  </ChildGadgets>
+                </StackPanel>
+              </ChildGadgets>
+            </ExpandableCategory>
+            <ExpandableCategory stylename="expandable_category" left="0px" right="" top="403px" margin_top="1dpi_px" localise_caption="ParticleTypeEditor_Scale" allow_expand="True">
+              <ChildGadgets>
+                <StackPanel stylename="stack_panel" height="32dpi_px" width="100%" left="4dpi_px" right="0dpi_px" top="8px" margin_top="8dpi_px" stack_order="TopToBottom">
+                  <ChildGadgets>
+                    <Grid stylename="grid_container" height="24dpi_px" left="4dpi_px" right="0dpi_px" top="0px" grid_columnlayout="['auto', '1*']" grid_resize="ResizeGridHeight">
+                      <Cell row="0" column="0" stylename="grid_container_panel" flow_index="0">
+                        <ChildGadgets>
+                          <Label stylename="label" height="16px" width="30px" left="0px" margin_right="16dpi_px" localise_caption="ParticleTypeEditor_Scale" />
+                        </ChildGadgets>
+                      </Cell>
+                      <Cell row="0" column="1" stylename="grid_container_panel" flow_index="0">
+                        <ChildGadgets>
+                          <StackPanel stylename="stack_panel" right="0px" stack_resize="ResizeAll">
+                            <ChildGadgets>
+                              <Label stylename="label" height="16px" width="7px" left="0px" margin_right="4dpi_px" caption="X" />
+                              <NumericTextBox stylename="numeric_text_box" left="11px" margin_right="8dpi_px" bind_property="scaleX" has_buttons="True" step_increment="0.1" max="999999" input_type="Real" />
+                              <Label stylename="label" height="16px" width="7px" left="69px" margin_right="4dpi_px" caption="Y" />
+                              <NumericTextBox stylename="numeric_text_box" left="80px" margin_right="4dpi_px" bind_property="scaleY" has_buttons="True" step_increment="0.1" max="999999" input_type="Real" />
+                              <Image stylename="help_icon_listbox" localise_tooltip="ParticleTypeEditor_ScaleHelp" left="134px" right="" />
+                            </ChildGadgets>
+                          </StackPanel>
+                        </ChildGadgets>
+                      </Cell>
+                    </Grid>
+                  </ChildGadgets>
+                </StackPanel>
+              </ChildGadgets>
+            </ExpandableCategory>
+            <ExpandableCategory stylename="expandable_category" left="0px" right="" top="427px" margin_top="1dpi_px" localise_caption="ParticleTypeEditor_Size" allow_expand="True">
+              <ChildGadgets>
+                <StackPanel stylename="stack_panel" height="57dpi_px" width="100%" left="4dpi_px" right="0dpi_px" top="8px" margin_top="8dpi_px" stack_order="TopToBottom">
+                  <ChildGadgets>
+                    <Grid stylename="grid_container" left="4dpi_px" right="0dpi_px" top="0px" grid_rowlayout="['auto', 'auto', '0dpi_px']" grid_columnlayout="['1*', 'auto', '1*', 'auto']" row_spacing="8dpi_px" column_spacing="8dpi_px" grid_resize="ResizeGridHeight">
+                      <Cell row="0" column="0" stylename="grid_container_panel" flow_index="0">
+                        <ChildGadgets>
+                          <Label stylename="label" height="16px" width="53px" left="0px" localise_caption="ParticleTypeEditor_Min" />
+                        </ChildGadgets>
+                      </Cell>
+                      <Cell row="0" column="1" stylename="grid_container_panel" flow_index="0">
+                        <ChildGadgets>
+                          <NumericTextBox stylename="numeric_text_box" right="0px" bind_property="sizeMin" has_buttons="True" step_increment="0.1" max="999999" input_type="Real" />
+                        </ChildGadgets>
+                      </Cell>
+                      <Cell row="0" column="2" stylename="grid_container_panel" flow_index="0">
+                        <ChildGadgets>
+                          <Label stylename="label" height="16px" width="57px" left="0px" localise_caption="ParticleTypeEditor_Incement" />
+                        </ChildGadgets>
+                      </Cell>
+                      <Cell row="0" column="3" stylename="grid_container_panel" flow_index="0">
+                        <ChildGadgets>
+                          <StackPanel stylename="stack_panel" right="0px" stack_resize="ResizeAll">
+                            <ChildGadgets>
+                              <NumericTextBox stylename="numeric_text_box" left="0px" margin_right="4dpi_px" bind_property="sizeIncrease" has_buttons="True" step_increment="0.01" input_type="Real" />
+                              <Image stylename="help_icon_listbox" localise_tooltip="ParticleTypeEditor_IncementHelp" left="54px" right="" />
+                            </ChildGadgets>
+                          </StackPanel>
+                        </ChildGadgets>
+                      </Cell>
+                      <Cell row="1" column="0" stylename="grid_container_panel" flow_index="0">
+                        <ChildGadgets>
+                          <Label stylename="label" height="16px" width="56px" left="0px" localise_caption="ParticleTypeEditor_Max" />
+                        </ChildGadgets>
+                      </Cell>
+                      <Cell row="1" column="1" stylename="grid_container_panel" flow_index="0">
+                        <ChildGadgets>
+                          <NumericTextBox stylename="numeric_text_box" bind_property="sizeMax" has_buttons="True" step_increment="0.1" input_type="Real" />
+                        </ChildGadgets>
+                      </Cell>
+                      <Cell row="1" column="2" stylename="grid_container_panel" flow_index="0">
+                        <ChildGadgets>
+                          <Label stylename="label" height="16px" width="38px" left="0px" localise_caption="ParticleTypeEditor_Wiggle" />
+                        </ChildGadgets>
+                      </Cell>
+                      <Cell row="1" column="3" stylename="grid_container_panel" flow_index="0">
+                        <ChildGadgets>
+                          <StackPanel stylename="stack_panel" right="0px" top="0px" stack_resize="ResizeAll">
+                            <ChildGadgets>
+                              <NumericTextBox stylename="numeric_text_box" left="0px" margin_right="4dpi_px" bind_property="sizeWiggle" has_buttons="True" step_increment="0.01" input_type="Real" />
+                              <Image stylename="help_icon_listbox" localise_tooltip="ParticleTypeEditor_WiggleHelp" left="54px" right="" />
+                            </ChildGadgets>
+                          </StackPanel>
+                        </ChildGadgets>
+                      </Cell>
+                    </Grid>
+                  </ChildGadgets>
+                </StackPanel>
+              </ChildGadgets>
+            </ExpandableCategory>
+            <ExpandableCategory stylename="expandable_category" left="0px" right="" top="451px" margin_top="1dpi_px" localise_caption="ParticleTypeEditor_Speed" allow_expand="True">
+              <ChildGadgets>
+                <StackPanel stylename="stack_panel" height="57dpi_px" left="4dpi_px" right="0dpi_px" top="8px" margin_top="8dpi_px" stack_order="TopToBottom">
+                  <ChildGadgets>
+                    <Grid stylename="grid_container" height="100%" left="4dpi_px" right="0dpi_px" top="0px" grid_rowlayout="['auto', 'auto']" grid_columnlayout="['1*', 'auto', '1*', 'auto']" row_spacing="8dpi_px" column_spacing="8dpi_px" grid_resize="ResizeGridHeight">
+                      <Cell row="0" column="0" stylename="grid_container_panel" flow_index="0">
+                        <ChildGadgets>
+                          <Label stylename="label" height="16px" width="53px" left="0px" localise_caption="ParticleTypeEditor_Min" />
+                        </ChildGadgets>
+                      </Cell>
+                      <Cell row="0" column="1" stylename="grid_container_panel" flow_index="0">
+                        <ChildGadgets>
+                          <NumericTextBox stylename="numeric_text_box" right="0px" bind_property="speedMin" has_buttons="True" step_increment="0.1" input_type="Real" />
+                        </ChildGadgets>
+                      </Cell>
+                      <Cell row="0" column="2" stylename="grid_container_panel" flow_index="0">
+                        <ChildGadgets>
+                          <Label stylename="label" height="16px" width="57px" left="0px" localise_caption="ParticleTypeEditor_Incement" />
+                        </ChildGadgets>
+                      </Cell>
+                      <Cell row="0" column="3" stylename="grid_container_panel" flow_index="0">
+                        <ChildGadgets>
+                          <StackPanel stylename="stack_panel" right="0px" stack_resize="ResizeAll">
+                            <ChildGadgets>
+                              <NumericTextBox stylename="numeric_text_box" left="0px" margin_right="4dpi_px" bind_property="speedIncrease" has_buttons="True" step_increment="0.01" input_type="Real" />
+                              <Image stylename="help_icon_listbox" localise_tooltip="ParticleTypeEditor_IncementHelp" left="54px" right="" />
+                            </ChildGadgets>
+                          </StackPanel>
+                        </ChildGadgets>
+                      </Cell>
+                      <Cell row="1" column="0" stylename="grid_container_panel" flow_index="0">
+                        <ChildGadgets>
+                          <Label stylename="label" height="16px" width="56px" left="0px" localise_caption="ParticleTypeEditor_Max" />
+                        </ChildGadgets>
+                      </Cell>
+                      <Cell row="1" column="1" stylename="grid_container_panel" flow_index="0">
+                        <ChildGadgets>
+                          <NumericTextBox stylename="numeric_text_box" bind_property="speedMax" has_buttons="True" step_increment="0.1" input_type="Real" />
+                        </ChildGadgets>
+                      </Cell>
+                      <Cell row="1" column="2" stylename="grid_container_panel" flow_index="0">
+                        <ChildGadgets>
+                          <Label stylename="label" height="16px" width="38px" left="0px" localise_caption="ParticleTypeEditor_Wiggle" />
+                        </ChildGadgets>
+                      </Cell>
+                      <Cell row="1" column="3" stylename="grid_container_panel" flow_index="0">
+                        <ChildGadgets>
+                          <StackPanel stylename="stack_panel" right="0px" top="0px" stack_resize="ResizeAll">
+                            <ChildGadgets>
+                              <NumericTextBox stylename="numeric_text_box" left="0px" margin_right="4dpi_px" bind_property="speedWiggle" has_buttons="True" step_increment="0.1" input_type="Real" />
+                              <Image stylename="help_icon_listbox" localise_tooltip="ParticleTypeEditor_WiggleHelp" left="54px" right="" />
+                            </ChildGadgets>
+                          </StackPanel>
+                        </ChildGadgets>
+                      </Cell>
+                    </Grid>
+                  </ChildGadgets>
+                </StackPanel>
+              </ChildGadgets>
+            </ExpandableCategory>
+            <ExpandableCategory stylename="expandable_category" left="288px" right="" top="475px" margin_top="1dpi_px" localise_caption="ParticleTypeEditor_Gravity" allow_expand="True">
+              <ChildGadgets>
+                <StackPanel stylename="stack_panel" height="36dpi_px" left="4dpi_px" right="0dpi_px" top="8px" margin_top="8dpi_px" stack_order="TopToBottom">
+                  <ChildGadgets>
+                    <Grid stylename="grid_container" left="4dpi_px" right="4dpi_px" top="0px" grid_rowlayout="['auto', '0dpi_px']" grid_columnlayout="['auto', 'auto', 'auto', 'auto']" row_spacing="8dpi_px" column_spacing="8dpi_px" grid_resize="ResizeGridHeight">
+                      <Cell row="0" column="0" stylename="grid_container_panel" flow_index="0">
+                        <ChildGadgets>
+                          <Label stylename="label" height="16px" width="31px" left="0px" localise_caption="ParticleTypeEditor_GravityForce" />
+                        </ChildGadgets>
+                      </Cell>
+                      <Cell row="0" column="1" stylename="grid_container_panel" flow_index="0">
+                        <ChildGadgets>
+                          <NumericTextBox stylename="numeric_text_box" right="0px" bind_property="gravityForce" has_buttons="True" step_increment="0.1" input_type="Real" />
+                        </ChildGadgets>
+                      </Cell>
+                      <Cell row="0" column="2" stylename="grid_container_panel" flow_index="0">
+                        <ChildGadgets>
+                          <Label stylename="label" height="16px" width="51px" left="0px" localise_caption="ParticleTypeEditor_GravityDir" />
+                        </ChildGadgets>
+                      </Cell>
+                      <Cell row="0" column="3" stylename="grid_container_panel" flow_index="0">
+                        <ChildGadgets>
+                          <StackPanel stylename="stack_panel" right="0px" stack_resize="ResizeAll">
+                            <ChildGadgets>
+                              <NumericTextBox stylename="numeric_text_box" left="0px" margin_right="4dpi_px" bind_property="gravityDirection" has_buttons="True" step_increment="5" max="360" input_type="Real" />
+                              <AngularSelect stylename="angular_select" left="58px" bind_property="gravityDirection" />
+                            </ChildGadgets>
+                          </StackPanel>
+                        </ChildGadgets>
+                      </Cell>
+                    </Grid>
+                  </ChildGadgets>
+                </StackPanel>
+              </ChildGadgets>
+            </ExpandableCategory>
+            <ExpandableCategory stylename="expandable_category" left="288px" right="" top="499px" margin_top="1dpi_px" localise_caption="ParticleTypeEditor_Direction" allow_expand="True">
+              <ChildGadgets>
+                <StackPanel stylename="stack_panel" height="92dpi_px" left="4dpi_px" right="0dpi_px" top="8px" margin_top="8dpi_px" stack_order="TopToBottom">
+                  <ChildGadgets>
+                    <Grid stylename="grid_container" left="4dpi_px" right="4dpi_px" top="0px" grid_rowlayout="['24dpi_px', '24dpi_px', 'auto', '0dpi_px']" grid_columnlayout="['1*', 'auto', '1*', 'auto']" row_spacing="8dpi_px" column_spacing="8dpi_px" grid_resize="ResizeGridHeight">
+                      <Cell row="0" column="0" stylename="grid_container_panel" flow_index="0">
+                        <ChildGadgets>
+                          <Label stylename="label" height="16px" width="53px" left="0px" localise_caption="ParticleTypeEditor_Min" />
+                        </ChildGadgets>
+                      </Cell>
+                      <Cell row="1" column="0" stylename="grid_container_panel" flow_index="0">
+                        <ChildGadgets>
+                          <Label stylename="label" height="16px" width="56px" left="0px" localise_caption="ParticleTypeEditor_Max" />
+                        </ChildGadgets>
+                      </Cell>
+                      <Cell row="2" column="0" stylename="grid_container_panel" flow_index="0">
+                        <ChildGadgets>
+                          <Label stylename="label" height="16px" width="57px" left="0px" localise_caption="ParticleTypeEditor_Incement" />
+                        </ChildGadgets>
+                      </Cell>
+                      <Cell row="2" column="1" stylename="grid_container_panel" flow_index="0">
+                        <ChildGadgets>
+                          <NumericTextBox stylename="numeric_text_box" left="0px" margin_right="4dpi_px" bind_property="directionIncrease" has_buttons="True" input_type="Real" />
+                        </ChildGadgets>
+                      </Cell>
+                      <Cell row="2" column="2" stylename="grid_container_panel" flow_index="0">
+                        <ChildGadgets>
+                          <Label stylename="label" height="16px" width="38px" left="0px" localise_caption="ParticleTypeEditor_Wiggle" />
+                        </ChildGadgets>
+                      </Cell>
+                      <Cell row="2" column="3" stylename="grid_container_panel" flow_index="0">
+                        <ChildGadgets>
+                          <NumericTextBox stylename="numeric_text_box" left="0px" margin_right="4dpi_px" bind_property="directionWiggle" has_buttons="True" input_type="Real" />
+                        </ChildGadgets>
+                      </Cell>
+                      <Cell row="0" column="2" rowspan="2" columnspan="2" stylename="grid_container_span_panel" flow_index="0">
+                        <ChildGadgets>
+                          <AngularSelect stylename="angular_select" height="56dpi_px" width="56dpi_px" right="0px" bind_property="direction" binding_target="DirectionRange" />
+                        </ChildGadgets>
+                      </Cell>
+                      <Cell row="0" column="1" rowspan="1" columnspan="2" stylename="grid_container_span_panel" flow_index="0">
+                        <ChildGadgets>
+                          <NumericTextBox stylename="numeric_text_box" right="10dpi_px" bind_property="directionMin" has_buttons="True" step_increment="5" max="360" input_type="Real" />
+                        </ChildGadgets>
+                      </Cell>
+                      <Cell row="1" column="1" rowspan="1" columnspan="2" stylename="grid_container_span_panel" flow_index="0">
+                        <ChildGadgets>
+                          <NumericTextBox stylename="numeric_text_box" right="10dpi_px" bind_property="directionMax" has_buttons="True" step_increment="5" max="360" input_type="Real" />
+                        </ChildGadgets>
+                      </Cell>
+                    </Grid>
+                  </ChildGadgets>
+                </StackPanel>
+              </ChildGadgets>
+            </ExpandableCategory>
+            <ExpandableCategory stylename="expandable_category" left="288px" right="" top="523px" margin_top="1dpi_px" localise_caption="ParticleTypeEditor_Orientation" allow_expand="True">
+              <ChildGadgets>
+                <Grid stylename="grid_container" height="124dpi_px" left="8dpi_px" right="0dpi_px" top="8px" margin_top="8dpi_px" grid_rowlayout="['24dpi_px', '24dpi_px', '24dpi_px', '24dpi_px', 'auto']" grid_columnlayout="['1*', 'auto', '1*', 'auto']" row_spacing="8dpi_px" column_spacing="8dpi_px" grid_resize="None">
+                  <Cell row="0" column="0" stylename="grid_container_panel" flow_index="0">
+                    <ChildGadgets>
+                      <Label stylename="label" height="16px" width="53px" left="0px" localise_caption="ParticleTypeEditor_Min" />
+                    </ChildGadgets>
+                  </Cell>
+                  <Cell row="1" column="0" stylename="grid_container_panel" flow_index="0">
+                    <ChildGadgets>
+                      <Label stylename="label" height="16px" width="56px" left="0px" localise_caption="ParticleTypeEditor_Max" />
+                    </ChildGadgets>
+                  </Cell>
+                  <Cell row="2" column="0" stylename="grid_container_panel" flow_index="0">
+                    <ChildGadgets>
+                      <Label stylename="label" height="16px" width="44px" left="0px" localise_caption="ParticleTypeEditor_Relative" />
+                    </ChildGadgets>
+                  </Cell>
+                  <Cell row="2" column="3" stylename="grid_container_panel" flow_index="0">
+                    <ChildGadgets>
+                      <Image stylename="help_icon_listbox" localise_tooltip="ParticleTypeEditor_RelativeOrientationHelp" right="0px" />
+                    </ChildGadgets>
+                  </Cell>
+                  <Cell row="3" column="0" stylename="grid_container_panel" flow_index="0">
+                    <ChildGadgets>
+                      <Label stylename="label" height="16px" width="57px" left="0px" localise_caption="ParticleTypeEditor_Incement" />
+                    </ChildGadgets>
+                  </Cell>
+                  <Cell row="3" column="1" stylename="grid_container_panel" flow_index="0">
+                    <ChildGadgets>
+                      <NumericTextBox stylename="numeric_text_box" left="0px" margin_right="4dpi_px" bind_property="orientationIncrease" has_buttons="True" input_type="Real" />
+                    </ChildGadgets>
+                  </Cell>
+                  <Cell row="3" column="2" stylename="grid_container_panel" flow_index="0">
+                    <ChildGadgets>
+                      <Label stylename="label" height="16px" width="38px" left="0px" localise_caption="ParticleTypeEditor_Wiggle" />
+                    </ChildGadgets>
+                  </Cell>
+                  <Cell row="3" column="3" stylename="grid_container_panel" flow_index="0">
+                    <ChildGadgets>
+                      <NumericTextBox stylename="numeric_text_box" left="0px" margin_right="4dpi_px" bind_property="orientationWiggle" has_buttons="True" input_type="Real" />
+                    </ChildGadgets>
+                  </Cell>
+                  <Cell row="0" column="2" rowspan="2" columnspan="2" stylename="grid_container_span_panel" flow_index="0">
+                    <ChildGadgets>
+                      <AngularSelect stylename="angular_select" height="56dpi_px" width="56dpi_px" right="8dpi_px" bind_property="orientation" binding_target="DirectionRange" />
+                    </ChildGadgets>
+                  </Cell>
+                  <Cell row="0" column="1" rowspan="1" columnspan="2" stylename="grid_container_span_panel" flow_index="0">
+                    <ChildGadgets>
+                      <NumericTextBox stylename="numeric_text_box" right="18dpi_px" bind_property="orientationMin" has_buttons="True" step_increment="5" max="360" input_type="Real" />
+                    </ChildGadgets>
+                  </Cell>
+                  <Cell row="1" column="1" rowspan="1" columnspan="2" stylename="grid_container_span_panel" flow_index="0">
+                    <ChildGadgets>
+                      <NumericTextBox stylename="numeric_text_box" right="18dpi_px" bind_property="orientationMax" has_buttons="True" step_increment="5" max="360" input_type="Real" />
+                    </ChildGadgets>
+                  </Cell>
+                  <Cell row="2" column="1" rowspan="1" columnspan="2" stylename="grid_container_span_panel" flow_index="0">
+                    <ChildGadgets>
+                      <CheckBox stylename="checkbox_stack" right="17dpi_px" bind_property="orientationRelativeToMotion" />
+                    </ChildGadgets>
+                  </Cell>
+                </Grid>
+              </ChildGadgets>
+            </ExpandableCategory>
+            <ExpandableCategory stylename="expandable_category" left="0px" right="" top="547px" margin_top="1dpi_px" localise_caption="ParticleTypeEditor_Subparticles" allow_expand="True">
+              <ChildGadgets>
+                <StackPanel stylename="stack_panel" height="120dpi_px" width="100%" left="4dpi_px" right="0dpi_px" top="8px" margin_top="8dpi_px" stack_order="TopToBottom">
+                  <ChildGadgets>
+                    <Grid stylename="grid_container" left="4dpi_px" right="0dpi_px" top="0px" grid_rowlayout="['24dpi_px', '24dpi_px', '24dpi_px', '24dpi_px']" grid_columnlayout="['1*', 'auto']" row_spacing="8dpi_px" column_spacing="8dpi_px" grid_resize="ResizeGridHeight">
+                      <Cell row="0" column="0" stylename="grid_container_panel" flow_index="0">
+                        <ChildGadgets>
+                          <Label stylename="label" height="16px" width="53px" left="0px" localise_caption="ParticleTypeEditor_SpawnDeath" />
+                        </ChildGadgets>
+                      </Cell>
+                      <Cell row="0" column="1" stylename="grid_container_panel" flow_index="0">
+                        <ChildGadgets>
+                          <StackPanel stylename="stack_panel" right="0px" stack_resize="ResizeAll">
+                            <ChildGadgets>
+                              <ParticleTypeButton stylename="resource_button" layout_id="btn_type_death" layout_guid="dc97e08a-bad1-4f59-b789-5b7f54706187" width="148dpi_px" left="0px" margin_right="8dpi_px" bind_property="spawnOnDeathView" />
+                              <Image stylename="help_icon_listbox" localise_tooltip="ParticleTypeEditor_SpawnDeathHelp" left="156px" right="" />
+                            </ChildGadgets>
+                          </StackPanel>
+                        </ChildGadgets>
+                      </Cell>
+                      <Cell row="1" column="0" stylename="grid_container_panel" flow_index="0">
+                        <ChildGadgets>
+                          <Label stylename="label" height="16px" width="78px" left="0px" localise_caption="ParticleEditor_EmitterCount" />
+                        </ChildGadgets>
+                      </Cell>
+                      <Cell row="1" column="1" stylename="grid_container_panel" flow_index="0">
+                        <ChildGadgets>
+                          <NumericTextBox stylename="numeric_text_box" right="24dpi_px" bind_property="spawnOnDeathCount" has_buttons="True" />
+                        </ChildGadgets>
+                      </Cell>
+                      <Cell row="2" column="0" stylename="grid_container_panel" flow_index="0">
+                        <ChildGadgets>
+                          <Label stylename="label" height="16px" width="60px" left="0px" localise_caption="ParticleTypeEditor_SpawnUpdate" />
+                        </ChildGadgets>
+                      </Cell>
+                      <Cell row="2" column="1" stylename="grid_container_panel" flow_index="0">
+                        <ChildGadgets>
+                          <StackPanel stylename="stack_panel" right="0px" stack_resize="ResizeAll">
+                            <ChildGadgets>
+                              <ParticleTypeButton stylename="resource_button" layout_id="btn_type_update" layout_guid="25a1a222-fe09-4fa8-a48f-ce37a53e062b" width="148dpi_px" left="0px" margin_right="8dpi_px" bind_property="spawnOnUpdateView" />
+                              <Image stylename="help_icon_listbox" localise_tooltip="ParticleTypeEditor_SpawnUpdateHelp" left="156px" right="" />
+                            </ChildGadgets>
+                          </StackPanel>
+                        </ChildGadgets>
+                      </Cell>
+                      <Cell row="3" column="0" stylename="grid_container_panel" flow_index="0">
+                        <ChildGadgets>
+                          <Label stylename="label" height="16px" width="78px" left="0px" localise_caption="ParticleEditor_EmitterCount" />
+                        </ChildGadgets>
+                      </Cell>
+                      <Cell row="3" column="1" stylename="grid_container_panel" flow_index="0">
+                        <ChildGadgets>
+                          <NumericTextBox stylename="numeric_text_box" right="24dpi_px" bind_property="spawnOnUpdateCount" has_buttons="True" />
+                        </ChildGadgets>
+                      </Cell>
+                    </Grid>
+                  </ChildGadgets>
+                </StackPanel>
+              </ChildGadgets>
+            </ExpandableCategory>
+          </ChildGadgets>
+        </StackPanel>
+      </ChildGadgets>
+    </ScrollPanel>
+  </Layout>
+  <Layout layout_name="ParticleEmitter" layout_guid="02932005-25a2-458c-a64f-8399b52494cf">
+    <StackPanel stylename="stack_panel" width="100%" stack_resize="ResizeHeight">
+      <ChildGadgets>
+        <Image stylename="particle_emitter_thumb_image" height="12px" width="7dpi_px" left="2px" top="6dpi_px" margin_left="2dpi_px" margin_right="2dpi_px" image_flags="Stretch, Centre, KeepAspectRatio" image="Buttons\widget_thumb.png" />
+        <ExpandableCategory stylename="particle_emitter_header" layout_id="header" layout_guid="b41d8327-ca99-42d4-b2f5-374a5d325656" left="11px" right="" top="0px" margin_top="1dpi_px" bind_property="name" allow_expand="True">
+          <ChildGadgets>
+            <Grid stylename="grid_container" left="4dpi_px" right="6dpi_px" top="4px" margin_top="4dpi_px" grid_rowlayout="['auto', '24dpi_px', 'auto', 'auto', 'auto', 'auto', 'auto', 'auto']" grid_columnlayout="['auto', '1*']" row_spacing="4dpi_px" column_spacing="16dpi_px" grid_resize="ResizeGrid">
+              <Cell row="0" column="0" stylename="grid_container_panel" flow_index="0">
+                <ChildGadgets>
+                  <Label stylename="label" height="16px" width="34px" left="0px" localise_caption="ParticleEditor_EmitterName" />
+                </ChildGadgets>
+              </Cell>
+              <Cell row="0" column="1" stylename="grid_container_panel" flow_index="0">
+                <ChildGadgets>
+                  <TextBox stylename="text_box" left="0px" right="32dpi_px" bind_property="name" />
+                  <Button stylename="button_up" layout_id="btn_remove_emitter" layout_guid="3947eb05-0e92-490a-bd9c-c2f67f8138a5" localise_tooltip="ParticleEditor_RemoveParticleEmitter" width="24dpi_px" right="0px" icon_flags="Stretch, Centre, KeepAspectRatio" icon="Buttons\icon_IDE_destroy.png" />
+                </ChildGadgets>
+              </Cell>
+              <Cell row="1" column="0" stylename="grid_container_panel" flow_index="0">
+                <ChildGadgets>
+                  <Label stylename="label" height="16px" width="45px" left="0px" localise_caption="ParticleEditor_EmitterEnabled" />
+                </ChildGadgets>
+              </Cell>
+              <Cell row="1" column="1" stylename="grid_container_panel" flow_index="0">
+                <ChildGadgets>
+                  <Grid stylename="grid_container" grid_columnlayout="['auto', '1*', 'auto']" column_spacing="16dpi_px" grid_resize="None">
+                    <Cell row="0" column="0" stylename="grid_container_panel" flow_index="0">
+                      <ChildGadgets>
+                        <CheckBox stylename="checkbox_stack" left="0px" bind_property="enabled" />
+                      </ChildGadgets>
+                    </Cell>
+                    <Cell row="0" column="1" stylename="grid_container_panel" flow_index="0">
+                      <ChildGadgets>
+                        <Label stylename="label" height="16px" width="73px" right="0px" localise_caption="ParticleEditor_EmitterColor" />
+                      </ChildGadgets>
+                    </Cell>
+                    <Cell row="0" column="2" stylename="grid_container_panel" flow_index="0">
+                      <ChildGadgets>
+                        <ColourSelectButton stylename="colour_select_button_up" bind_property="editorColor" />
+                      </ChildGadgets>
+                    </Cell>
+                  </Grid>
+                </ChildGadgets>
+              </Cell>
+              <Cell row="2" column="0" stylename="grid_container_panel" flow_index="0">
+                <ChildGadgets>
+                  <Label stylename="label" height="16px" width="72px" left="0px" localise_caption="ParticleEditor_EmitterParticleType" />
+                </ChildGadgets>
+              </Cell>
+              <Cell row="2" column="1" stylename="grid_container_panel" flow_index="0">
+                <ChildGadgets>
+                  <ParticleTypeButton stylename="resource_button" layout_id="btn_type_browse" layout_guid="654eab21-6539-45ab-8d07-6ed385fbb350" width="100%" bind_property="particleTypeView" />
+                </ChildGadgets>
+              </Cell>
+              <Cell row="3" column="0" stylename="grid_container_panel" flow_index="0">
+                <ChildGadgets>
+                  <Label stylename="label" height="16px" width="32px" left="0px" localise_caption="ParticleEditor_EmitterMode" />
+                </ChildGadgets>
+              </Cell>
+              <Cell row="3" column="1" stylename="grid_container_panel" flow_index="0">
+                <ChildGadgets>
+                  <ComboBox stylename="combobox_panel" width="100%" bind_property="emitMode">
+                    <ListBoxItems />
+                  </ComboBox>
+                </ChildGadgets>
+              </Cell>
+              <Cell row="4" column="0" stylename="grid_container_panel" flow_index="0">
+                <ChildGadgets>
+                  <Label stylename="label" height="16px" width="78px" left="0px" localise_caption="ParticleEditor_EmitterCount" />
+                </ChildGadgets>
+              </Cell>
+              <Cell row="4" column="1" stylename="grid_container_panel" flow_index="0">
+                <ChildGadgets>
+                  <NumericTextBox stylename="numeric_text_box" width="100%" bind_property="emitCount" />
+                </ChildGadgets>
+              </Cell>
+              <Cell row="5" column="0" stylename="grid_container_panel" flow_index="0">
+                <ChildGadgets>
+                  <Label stylename="label" height="16px" width="65px" left="0px" localise_caption="ParticleEditor_EmitterDistribution" />
+                </ChildGadgets>
+              </Cell>
+              <Cell row="5" column="1" stylename="grid_container_panel" flow_index="0">
+                <ChildGadgets>
+                  <ComboBox stylename="combobox_panel" width="100%" bind_property="distribution">
+                    <ListBoxItems />
+                  </ComboBox>
+                </ChildGadgets>
+              </Cell>
+              <Cell row="6" column="0" stylename="grid_container_panel" flow_index="0">
+                <ChildGadgets>
+                  <Label stylename="label" height="16px" width="35px" left="0px" localise_caption="ParticleEditor_EmitterShape" />
+                </ChildGadgets>
+              </Cell>
+              <Cell row="6" column="1" stylename="grid_container_panel" flow_index="0">
+                <ChildGadgets>
+                  <ComboBox stylename="combobox_panel" width="100%" bind_property="shape">
+                    <ListBoxItems />
+                  </ComboBox>
+                </ChildGadgets>
+              </Cell>
+              <Cell row="7" column="1" stylename="grid_container_panel" flow_index="0">
+                <ChildGadgets>
+                  <Grid stylename="grid_container" margin_bottom="8dpi_px" grid_rowlayout="['auto', 'auto']" grid_columnlayout="['auto']" grid_resize="ResizeGrid">
+                    <Cell row="0" column="0" stylename="grid_container_panel" flow_index="0">
+                      <ChildGadgets>
+                        <Grid stylename="grid_container" left="0px" top="0px" grid_rowlayout="['auto', 'auto']" grid_columnlayout="['auto', '0.5*', 'auto', '0.5*']" row_spacing="4dpi_px" column_spacing="8dpi_px" grid_resize="ResizeGrid">
+                          <Cell row="0" column="0" stylename="grid_container_panel" flow_index="0">
+                            <ChildGadgets>
+                              <Label stylename="label" height="16px" width="21px" left="0px" localise_caption="ParticleEditor_ShapeLeft" />
+                            </ChildGadgets>
+                          </Cell>
+                          <Cell row="0" column="1" stylename="grid_container_panel" flow_index="0">
+                            <ChildGadgets>
+                              <NumericTextBox stylename="numeric_text_box" width="100%" bind_property="shapeLeft" input_type="Real" />
+                            </ChildGadgets>
+                          </Cell>
+                          <Cell row="0" column="2" stylename="grid_container_panel" flow_index="0">
+                            <ChildGadgets>
+                              <Label stylename="label" height="16px" width="21px" left="0px" localise_caption="ParticleEditor_ShapeTop" />
+                            </ChildGadgets>
+                          </Cell>
+                          <Cell row="0" column="3" stylename="grid_container_panel" flow_index="0">
+                            <ChildGadgets>
+                              <NumericTextBox stylename="numeric_text_box" width="100%" bind_property="shapeTop" input_type="Real" />
+                            </ChildGadgets>
+                          </Cell>
+                          <Cell row="1" column="0" stylename="grid_container_panel" flow_index="0">
+                            <ChildGadgets>
+                              <Label stylename="label" height="16px" width="32px" left="0px" localise_caption="ParticleEditor_ShapeWidth" />
+                            </ChildGadgets>
+                          </Cell>
+                          <Cell row="1" column="1" stylename="grid_container_panel" flow_index="0">
+                            <ChildGadgets>
+                              <NumericTextBox stylename="numeric_text_box" width="100%" bind_property="shapeWidth" input_type="Real" />
+                            </ChildGadgets>
+                          </Cell>
+                          <Cell row="1" column="2" stylename="grid_container_panel" flow_index="0">
+                            <ChildGadgets>
+                              <Label stylename="label" height="16px" width="37px" left="0px" localise_caption="ParticleEditor_ShapeHeight" />
+                            </ChildGadgets>
+                          </Cell>
+                          <Cell row="1" column="3" stylename="grid_container_panel" flow_index="0">
+                            <ChildGadgets>
+                              <NumericTextBox stylename="numeric_text_box" width="100%" bind_property="shapeHeight" input_type="Real" />
+                            </ChildGadgets>
+                          </Cell>
+                        </Grid>
+                      </ChildGadgets>
+                    </Cell>
+                    <Cell row="1" column="0" stylename="grid_container_panel" flow_index="0">
+                      <ChildGadgets>
+                        <Grid stylename="grid_container" margin_top="16dpi_px" grid_rowlayout="['auto']" grid_columnlayout="['auto', '1*']" grid_resize="ResizeGridHeight">
+                          <Cell row="0" column="0" stylename="grid_container_panel" flow_index="0">
+                            <ChildGadgets>
+                              <Label stylename="label" height="16px" width="46px" left="0px" localise_caption="ParticleEditor_ShapeRotation" />
+                            </ChildGadgets>
+                          </Cell>
+                          <Cell row="0" column="1" stylename="grid_container_panel" flow_index="0">
+                            <ChildGadgets>
+                              <StackPanel stylename="stack_panel" right="0px" stack_resize="ResizeAll">
+                                <ChildGadgets>
+                                  <NumericTextBox stylename="numeric_text_box" left="0px" margin_right="8dpi_px" bind_property="shapeRotation" has_buttons="True" step_increment="5" max="360" input_type="Real" />
+                                  <AngularSelect stylename="angular_select" left="62px" top="4px" bind_property="shapeRotation" />
+                                </ChildGadgets>
+                              </StackPanel>
+                            </ChildGadgets>
+                          </Cell>
+                        </Grid>
+                      </ChildGadgets>
+                    </Cell>
+                  </Grid>
+                </ChildGadgets>
+              </Cell>
+            </Grid>
+          </ChildGadgets>
+        </ExpandableCategory>
+      </ChildGadgets>
+    </StackPanel>
+  </Layout>
+  <Layout layout_name="ParticleTypeWindow" layout_guid="fde4f6df-6820-4e01-9323-8441ff123a43">
+    <Window stylename="window" height="768dpi_px" width="316dpi_px" left="0px" localise_title="ParticleTypeEditor_Title" window_flags="Default">
+      <Client>
+        <ChildGadgets>
+          <TabControl stylename="tab_control" layout_id="tabcontrol" layout_guid="396b32d5-0a79-4548-8103-855d016d2718" tab_flags="CloseButton, InsertBeforeAddButton, DragEnabled">
+            <Cell row="0" column="0" stylename="grid_container_panel" flow_index="0">
+              <Gadgets>
+                <Grid stylename="tab_container" layout_id="tab_list" layout_guid="6cfc6398-f5e9-4d35-a573-7cd13a204049" grid_columnlayout="['auto', '30px']">
+                  <Cell row="0" column="0" stylename="grid_container_panel" flow_index="0">
+                    <Gadgets>
+                      <TabItem stylename="tab_item" tooltip="Tab 1" height="22px" name="Tab 1">
+                        <ContextMenu stylename="context_menu">
+                          <MenuEntry stylename="menu_entry" layout_id="entry0" layout_guid="80e28048-b5ea-4984-b7ec-a07f647fcb9f" localise_name="CMenu_CloseAllButThis" />
+                        </ContextMenu>
+                        <Client />
+                      </TabItem>
+                    </Gadgets>
+                  </Cell>
+                  <Cell row="0" column="1" stylename="tab_container_panel" flow_index="0">
+                    <Gadgets>
+                      <Button stylename="add_tab_button_up" layout_id="add_tab" layout_guid="1f5c4d2d-2d44-447a-ade5-b7d40487c7dd" name="+" />
+                    </Gadgets>
+                  </Cell>
+                </Grid>
+              </Gadgets>
+            </Cell>
+          </TabControl>
+        </ChildGadgets>
+      </Client>
+      <Layout layout_name="BasicWindowFrame" layout_guid="f0695f87-de65-4a48-a3a8-9bd5cb5a8d8c" />
+    </Window>
+  </Layout>
+</Layouts>

@@ -1,0 +1,42 @@
+{
+	"font_ttfpath_label": {
+		colour: "#FF8B8B8B", 
+		auto_ellipsis: "True"
+	},
+	
+	"window_font_editor": {
+		window_flags: "Default", 
+		width_min: "730dpi_px", 
+		height_min: "400dpi_px",
+		width_max: "1600dpi_px",
+		height_max: "900dpi_px"
+	},
+	
+	"font_range_selection": {
+		range_colour: "#FF404040"
+	},
+	
+	"label_glypherror": {
+		colour: "#FF0000E2"
+	},
+	
+	"group_box_aa_toggle": {
+		colour: "#00000000"
+	},
+	
+	"fonteditor_grid": {
+		splitter_thickness: "14dpi_px"
+	},
+	
+	"font_gms1_label": {
+		halign: "hAlignCentre"
+	},
+	
+	"label_texture_size": {
+		colour: "#FFA2A2A2"
+	},
+
+	"image_game_preview": {
+		colour: "#FFFFFFFF"
+	}
+}

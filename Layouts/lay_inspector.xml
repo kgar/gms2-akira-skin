@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Layouts>
+  <Layout layout_name="InspectorWindow" layout_guid="e67e5699-6dd9-4da8-9eb7-098677ba1648">
+    <Window stylename="default_window" height="397dpi_px" width="496dpi_px" left="366dpi_px" top="157dpi_px" localise_title="Inspector_WindowTitle">
+      <Client>
+        <ChildGadgets>
+            <ScrollPanel stylename="auto_adjust_scrollpanel" top="0dpi_px" bottom="1dpi_px">
+              <ChildGadgets>
+                <StackPanel stylename="stack_panel" layout_id="inspector_panel" layout_guid="363bbca6-ab61-458f-9015-a638e6737590" left="0px" right="0px" top="0px" stack_order="TopToBottom" stack_resize="ResizeHeight" />
+              </ChildGadgets>
+            </ScrollPanel>
+        </ChildGadgets>
+      </Client>
+      <Layout layout_name="BasicWindowFrame" layout_guid="f0695f87-de65-4a48-a3a8-9bd5cb5a8d8c" />
+    </Window>
+  </Layout>
+</Layouts>
